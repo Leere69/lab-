@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра "Вгадай число"</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    input {
+      margin: 10px;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Вітаємо у грі "Вгадай число"!</h1>
+  <div id="gameSetup">
+    <p>Введіть межі діапазону:</p>
+    <input type="number" id="lowerLimit" placeholder="Нижня межа">
+    <input type="number" id="upperLimit" placeholder="Верхня межа">
+    <button onclick="startGame()">Почати гру</button>
+  </div>
+  
+  <div id="gamePlay" style="display: none;">
+    <p>Я загадую число. Спробуйте вгадати:</p>
+    <input type="number" id="guessInput" placeholder="Ваш варіант">
+    <button onclick="makeGuess()">Вгадати</button>
+    <p id="feedback"></p>
+  </div>
+  
+  <div id="result"></div>
+
+  <script src="lol.js"></script>
+</body>
+</html>
